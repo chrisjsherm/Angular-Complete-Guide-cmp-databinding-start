@@ -16,12 +16,15 @@ export class GameControlComponent implements OnInit {
   }
 
   onStartGame() {
-    this.secondsTimerId = window.setInterval(() => {
-      this.secondsTimer++;
-    }, 1000);
+    this.secondsTimerId = window.setInterval(
+      this.incrementSecondsTimer.bind(this), 1000);
   }
 
   onEndGame() {
     window.clearInterval(this.secondsTimerId);
+  }
+
+  private incrementSecondsTimer() {
+    this.secondsTimer++;
   }
 }
