@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button (click)="onStartGame()" class="btn btn-success">
+      Start
+    </button>
+
+    <button (click)="onEndGame()" class="btn btn-danger">
+      End
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <app-even [secondsTimer]="secondsTimer"></app-even>
+  </div>
+
+  <div class="col-xs-6">
+    <app-odd [secondsTimer]="secondsTimer"></app-odd>
+  </div>
+</div>
