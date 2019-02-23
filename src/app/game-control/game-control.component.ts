@@ -22,6 +22,7 @@ export class GameControlComponent implements OnInit {
 
   onEndGame() {
     window.clearInterval(this.secondsTimerId);
+    this.secondsTimer = 0;
   }
 
   private incrementSecondsTimer() {
